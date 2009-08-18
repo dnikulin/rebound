@@ -53,7 +53,7 @@ int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen) {
 		if (sym == NULL) {
 			// Report error and return an error code bind()
 			// is permitted to return
-			perror("rebound: dlsym");
+			perror(PROG "dlsym");
 			return EINVAL;
 		}
 
